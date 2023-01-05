@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+
+    $conection = new mysqli("db", "root", "root", "osiris");
+    $conection-> set_charset("utf8");
+    for ($i=1; $i <= 714; $i++) { 
+        add($conection, "PT", $i);
+    }
+    for ($i=1; $i <= 1185; $i++) { 
+        add($conection, "CT", $i);
+    }
+    
+
+    function add($conection, $book, $spell){
+        $add = $conection -> prepare("INSERT INTO spell(book, spell) VALUES (?,?)");
+        $nBook = $book;
+        $nSpell= $spell;
+        $add->bind_param('si', $nBook, $nSpell);
+        $add -> execute();
+        $add-> close();
+        }
+
+
+
+    $conection->close();
+
+
+echo "HECHO";
+?>
+</body>
+</html> 
+
