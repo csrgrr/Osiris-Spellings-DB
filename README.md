@@ -26,6 +26,7 @@ In case of using the PHP files, you will have to manually assign the __type__ in
 
 
 ### Disclaimer:
-If you intend to use this database for research, you must take into account that the position in the document is not included in those cases belonging to vol. VIII. In other cases it is not known either for various reasons and it will appear designated as _unknown_.
-In cases where the document time is unknown, it will be marked with a _?_.
-In any case, you also have to take into account possible human error, so we recommend __double-checking__ the results..
+If you intend to use this database for research, you must take into account that the position in the document is not included in those cases belonging to vol. VIII. In other cases it is not known either for various reasons and it will appear designated as _unknown_.\
+In cases where the document time is unknown, it will be marked with a _?_.\
+If the _spell_ value in the table _spelling_ is __1__, it means that the spell is _unknown_.\
+In any case, you also have to take into account possible human error, so we recommend __double-checking__ the results.
