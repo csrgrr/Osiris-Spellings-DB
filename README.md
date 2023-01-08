@@ -25,7 +25,7 @@ You can import the .sql file directly into your preferred Database Manager or ru
 We do not recommener to use the PHP files for this purpose, since some changes have been made manually on the db.
 
 ### TO DO:
-- Assign the value of the spell to those that still have the value _1_ and do not belong to the last section of the vol. VIII (I-IV done).
+- Assign the value of the spell to those that still have the value _1_ and do not belong to the last section of the vol. VIII.
 - Reasign position on vol. I-VII
 - Create PHP to assign position on vol. VIII.
 
