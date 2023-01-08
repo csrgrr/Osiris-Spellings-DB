@@ -22,9 +22,9 @@ __These data allow us to know:__
 
 ### How to import:
 You can import the .sql file directly into your preferred Database Manager or run the PHP files used to create this db.
-We do not recommener to use the PHP files for this purpose, since some changes have been amde manually.
+We do not recommener to use the PHP files for this purpose, since some changes have been made manually on the db.
 
-### TODO:
+### TO DO:
 - Assign the value of the spell to those that still have the value _1_ and do not belong to the last section of the vol. VIII.
 - Reasign position on vol. I-VII
 - Create PHP to assign position on vol. VIII.
