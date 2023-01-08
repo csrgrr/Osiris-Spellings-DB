@@ -22,8 +22,12 @@ __These data allow us to know:__
 
 ### How to import:
 You can import the .sql file directly into your preferred Database Manager or run the PHP files used to create this db.
-In case of using the PHP files, you will have to manually assign the __type__ in the __document__ table (it will be assigned "coffin" by default) and set the __foreign keys__ as seen in the image above.
+We do not recommener to use the PHP files for this purpose, since some changes have been amde manually.
 
+### TODO:
+- Assign the value of the spell to those that still have the value _1_ and do not belong to the last section of the vol. VIII.
+- Reasign position on vol. I-VII
+- Create PHP to assign position on vol. VIII.
 
 ### Disclaimer:
 If you intend to use this database for research, you must take into account that the position in the document is not included in those cases belonging to vol. VIII. In other cases it is not known either for various reasons and it will appear designated as _unknown_.\
