@@ -25,8 +25,9 @@ You can import the .sql file directly into your preferred Database Manager or ru
 We do not recommener to use the PHP files for this purpose, since some changes have been made manually on the db.
 
 ### TO DO:
-- Check every _unknown_ position on vol. I-VII (manually).
 - Create PHP to assign position on vol. VIII.
+- Check every _unknown_ position on vol. I-VIII (manually).
+
 
 ### Disclaimer:
 If you intend to use this database for research, you must take into account that the position in the document is not included in those cases belonging to vol. VIII. In other cases it is not known either for various reasons and it will appear designated as _unknown_.\
