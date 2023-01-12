@@ -28,6 +28,7 @@ We do not recommener to use the PHP files for this purpose, since some changes h
 - Check positions on vol. VIII.
 - Check every _unknown_ position on vol. I-VIII (manually).
 - Check every X position (and X (E))
+- Update php
 - Testing
 
 
