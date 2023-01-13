@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 12-01-2023 a las 16:58:25
+-- Tiempo de generación: 13-01-2023 a las 17:51:05
 -- Versión del servidor: 8.0.31
 -- Versión de PHP: 8.0.25
 
@@ -5909,7 +5909,7 @@ INSERT INTO `spelling` (`id`, `vol`, `page`, `section`, `pyr_page`, `pyr_sect`, 
 (3723, 8, 320, NULL, 634, 'a', 1, 'D4:Q1', 367, 'F', 'T1C'),
 (3724, 8, 349, NULL, 778, 'a', 1, 'D4:Q1', 428, 'F', 'T1C'),
 (3725, 8, 357, NULL, 825, 'a', 1, 'D4:Q1', 446, 'F', 'T1C'),
-(3726, 8, 365, NULL, 829, 'c', 1, 'D4:Q1', 447, 'Fr & F', 'T1C'),
+(3726, 8, 365, NULL, 829, 'c', 1, 'D4:Q1', 447, 'Fr', 'T1C'),
 (3727, 8, 368, NULL, 831, '', 1, 'D4:Q1', 449, 'F', 'T1C'),
 (3728, 8, 369, NULL, 832, 'b', 1, 'D4:Q1', 450, 'F', 'T1C'),
 (3729, 8, 369, NULL, 832, 'b', 1, 'D4:Q1', 450, 'F', 'T1C'),
