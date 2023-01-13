@@ -15,6 +15,7 @@
     //Top = L
     //Front = Fr
     //Bottom = Bo
+    // Others(example: canoptic box) = X
 
 $conection = new mysqli("db", "root", "root", "osiris");
 $conection-> set_charset("utf8");
