@@ -20,7 +20,7 @@ __These data allow us to know:__
 - Position in the document
 - Archaeological location
 
-### Position code:
+### Position codes:
 
 - Head = H
 - Foot = F
