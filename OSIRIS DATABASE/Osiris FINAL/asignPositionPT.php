@@ -15,6 +15,7 @@
     //Top = L
     //Front = Fr
     //Bottom = Bo
+    //Side = S
     // Others(example: canoptic box) = X
 
 $conection = new mysqli("db", "root", "root", "osiris");
