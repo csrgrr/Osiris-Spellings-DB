@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: db
--- Tiempo de generación: 13-01-2023 a las 17:51:05
--- Versión del servidor: 8.0.31
--- Versión de PHP: 8.0.25
+-- Host: db
+-- Generation Time: Jan 16, 2023 at 01:13 PM
+-- Server version: 8.0.30
+-- PHP Version: 8.0.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,24 +18,24 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `osiris`
+-- Database: `osiris`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `document`
+-- Table structure for table `document`
 --
 
 CREATE TABLE `document` (
   `code` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `time` varchar(100) NOT NULL,
-  `location` varchar(100) NOT NULL,
-  `type` varchar(100) NOT NULL
+  `time` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `location` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `type` varchar(100) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `document`
+-- Dumping data for table `document`
 --
 
 INSERT INTO `document` (`code`, `time`, `location`, `type`) VALUES
@@ -242,17 +242,17 @@ INSERT INTO `document` (`code`, `time`, `location`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `spell`
+-- Table structure for table `spell`
 --
 
 CREATE TABLE `spell` (
   `id` int NOT NULL,
-  `book` varchar(10) NOT NULL,
+  `book` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
   `spell` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `spell`
+-- Dumping data for table `spell`
 --
 
 INSERT INTO `spell` (`id`, `book`, `spell`) VALUES
@@ -2159,25 +2159,25 @@ INSERT INTO `spell` (`id`, `book`, `spell`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `spelling`
+-- Table structure for table `spelling`
 --
 
 CREATE TABLE `spelling` (
   `id` int NOT NULL,
   `vol` int NOT NULL,
   `page` int NOT NULL,
-  `section` varchar(10) DEFAULT NULL,
+  `section` varchar(10) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `pyr_page` int DEFAULT NULL,
-  `pyr_sect` varchar(100) DEFAULT NULL,
+  `pyr_sect` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `is_locution` tinyint(1) NOT NULL,
-  `type` varchar(100) DEFAULT NULL,
+  `type` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `spell` int DEFAULT NULL,
   `position` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `document` varchar(100) DEFAULT NULL
+  `document` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `spelling`
+-- Dumping data for table `spelling`
 --
 
 INSERT INTO `spelling` (`id`, `vol`, `page`, `section`, `pyr_page`, `pyr_sect`, `is_locution`, `type`, `spell`, `position`, `document`) VALUES
@@ -2722,11 +2722,11 @@ INSERT INTO `spelling` (`id`, `vol`, `page`, `section`, `pyr_page`, `pyr_sect`, 
 (539, 4, 86, 'h', NULL, NULL, 0, 'F51*D21:A40', 1026, 'B', 'B6C'),
 (540, 8, 132, NULL, 155, 'a', 0, 'F51*D21:A40', 217, 'L', 'B6C'),
 (541, 8, 315, NULL, 625, 'a', 0, 'F51*D21:A40', 365, 'B', 'B6C'),
-(542, 2, 48, 'a', NULL, NULL, 0, 'D4:(Q1*A40)', 797, 'X', 'B7C'),
+(542, 2, 48, 'a', NULL, NULL, 0, 'D4:(Q1*A40)', 797, 'S', 'B7C'),
 (543, 3, 269, 'a', NULL, NULL, 0, 'D4:(Q1*A40)', 942, 'F', 'B7C'),
 (544, 3, 275, 'b', NULL, NULL, 0, 'D4:(Q1*A40)', 942, 'F', 'B7C'),
 (545, 5, 183, 'f', NULL, NULL, 0, 'D4:(Q1*A40)', 1118, 'F', 'B7C'),
-(546, 2, 40, 'h', NULL, NULL, 0, 'F51*D21:A40', 794, 'X', 'B7C'),
+(546, 2, 40, 'h', NULL, NULL, 0, 'F51*D21:A40', 794, 'S', 'B7C'),
 (547, 2, 130, 'e', NULL, NULL, 0, 'Q1:D4:A40', 827, 'Fr', 'B9C'),
 (548, 2, 294, 'b', NULL, NULL, 0, 'Q1:D4:A40', 869, 'H', 'B9C'),
 (549, 2, 302, 'c', NULL, NULL, 0, 'Q1:D4:A40', 869, 'H', 'B9C'),
@@ -2940,7 +2940,7 @@ INSERT INTO `spelling` (`id`, `vol`, `page`, `section`, `pyr_page`, `pyr_sect`, 
 (757, 8, 96, NULL, 146, 'a', 0, 'Q1:D4:A40', 215, 'Bo', 'B19C'),
 (758, 8, 48, NULL, 134, 'b', 0, 'Q1*D4', 213, 'Bo', 'B19C');
 INSERT INTO `spelling` (`id`, `vol`, `page`, `section`, `pyr_page`, `pyr_sect`, `is_locution`, `type`, `spell`, `position`, `document`) VALUES
-(759, 1, 155, 'b', NULL, NULL, 0, '(Q1*A40):D4', 751, 'X', 'B20C'),
+(759, 1, 155, 'b', NULL, NULL, 0, '(Q1*A40):D4', 751, 'Bo', 'B20C'),
 (760, 2, 291, 'b', NULL, NULL, 0, 'Q1:D4:A40', 869, 'H', 'B1L'),
 (761, 3, 89, 'g', NULL, NULL, 0, 'Q1:D4:A40', 901, 'B & Fr', 'B1L'),
 (762, 5, 357, 'XX', NULL, NULL, 0, 'Q1:D4:A40', 1180, 'Fr', 'B1L'),
@@ -3446,7 +3446,7 @@ INSERT INTO `spelling` (`id`, `vol`, `page`, `section`, `pyr_page`, `pyr_sect`, 
 (1262, 8, 172, NULL, 178, 'a', 0, 'D4:Q1', 219, 'Bo', 'L2Li'),
 (1263, 8, 183, NULL, 186, 'b', 0, 'D4:Q1', 219, 'Bo', 'L2Li'),
 (1264, 4, 255, 'a', NULL, NULL, 0, 'D4:Q1', 1049, 'L', 'L3Li'),
-(1265, 4, 255, 'a', NULL, NULL, 0, 'D4:Q1', 1049, 'X', 'L1NY'),
+(1265, 4, 255, 'a', NULL, NULL, 0, 'D4:Q1', 1049, 'Bo', 'L1NY'),
 (1266, 8, 261, NULL, 234, 'b', 0, 'Q1*D4', 230, 'unknown', 'L1NY'),
 (1267, 1, 351, 'b', NULL, NULL, 0, '(Q1*A40):D4', 789, 'unknown', 'MAnn.'),
 (1268, 1, 365, 'a', NULL, NULL, 0, '(Q1*A40):D4', 789, 'unknown', 'MAnn.'),
@@ -3548,10 +3548,10 @@ INSERT INTO `spelling` (`id`, `vol`, `page`, `section`, `pyr_page`, `pyr_sect`, 
 (1364, 6, 143, 'm', NULL, NULL, 0, '(Q1*A40):D4', 1261, 'B', 'M22C'),
 (1365, 5, 284, 'b', NULL, NULL, 0, 'Q1*D4', 1148, 'Fr', 'M22C'),
 (1366, 1, 349, 'd', NULL, NULL, 0, 'Q1:D4:A40', 789, 'X', 'M23C'),
-(1367, 1, 365, 'a', NULL, NULL, 0, 'Q1:D4:A40', 789, 'X', 'M23C'),
+(1367, 1, 365, 'a', NULL, NULL, 0, 'Q1:D4:A40', 789, 'S', 'M23C'),
 (1368, 5, 287, 'c', NULL, NULL, 0, 'Q1:D4:A40', 1150, 'X 3', 'M23C'),
 (1369, 5, 39, 'e', NULL, NULL, 0, '(Q1*A40):D4', 1091, 'X 3', 'M23C'),
-(1370, 1, 120, 'b', NULL, NULL, 0, 'Q1:D4:A40', 747, 'X', 'M25C'),
+(1370, 1, 120, 'b', NULL, NULL, 0, 'Q1:D4:A40', 747, '\'unknown\'', 'M25C'),
 (1371, 1, 349, 'd', NULL, NULL, 0, 'Q1:D4:A40', 789, 'L', 'M28C'),
 (1372, 1, 351, 'b', NULL, NULL, 0, 'Q1:D4:A40', 789, 'L', 'M28C'),
 (1373, 1, 396, 'b', NULL, NULL, 0, 'Q1:D4:A40', 789, 'L', 'M28C'),
@@ -4414,17 +4414,17 @@ INSERT INTO `spelling` (`id`, `vol`, `page`, `section`, `pyr_page`, `pyr_sect`, 
 (2229, 8, 46, NULL, 134, 'a', 1, 'Q1:D4:A40', 213, 'L', 'B6Bo'),
 (2230, 7, 301, 'a', NULL, NULL, 1, 'Q1:D4:A40', 1763, 'Bo', 'B1C'),
 (2231, 1, 396, 'b', NULL, NULL, 1, 'A40*(F51:D21)-retro', 789, 'B', 'B1C'),
-(2232, 6, 113, 'a', NULL, NULL, 1, 'Q1:D4:A40', 1236, 'X', 'B2C'),
-(2233, 6, 110, 'f', NULL, NULL, 1, 'D4:(Q1*A40)', 1234, 'X', 'B2C'),
-(2234, 6, 112, 'f', NULL, NULL, 1, 'D4:(Q1*A40)', 1235, 'X', 'B2C'),
-(2235, 6, 109, 'f', NULL, NULL, 1, 'D4:Q1', 1234, 'X', 'B2C'),
-(2236, 6, 109, 'j', NULL, NULL, 1, 'D4:Q1', 1234, 'X', 'B2C'),
-(2237, 6, 115, 'f', NULL, NULL, 1, 'D4:Q1', 1237, 'X', 'B2C'),
-(2238, 6, 110, 'a', NULL, NULL, 1, 'F51*D21:A40', 1234, 'X', 'B2C'),
+(2232, 6, 113, 'a', NULL, NULL, 1, 'Q1:D4:A40', 1236, 'Bo', 'B2C'),
+(2233, 6, 110, 'f', NULL, NULL, 1, 'D4:(Q1*A40)', 1234, 'Bo', 'B2C'),
+(2234, 6, 112, 'f', NULL, NULL, 1, 'D4:(Q1*A40)', 1235, 'Bo', 'B2C'),
+(2235, 6, 109, 'f', NULL, NULL, 1, 'D4:Q1', 1234, 'Bo', 'B2C'),
+(2236, 6, 109, 'j', NULL, NULL, 1, 'D4:Q1', 1234, 'Bo', 'B2C'),
+(2237, 6, 115, 'f', NULL, NULL, 1, 'D4:Q1', 1237, 'Bo', 'B2C'),
+(2238, 6, 110, 'a', NULL, NULL, 1, 'F51*D21:A40', 1234, 'Bo', 'B2C'),
 (2239, 3, 50, 'a', NULL, NULL, 1, 'F51:A40:X1', 887, 'unknown', 'B2C'),
-(2240, 6, 113, 'd', NULL, NULL, 1, 'F51:D4:(Q1*A40)', 1236, 'X', 'B2C'),
-(2241, 6, 113, 'f', NULL, NULL, 1, 'F51:D4:(Q1*A40)', 1236, 'X', 'B2C'),
-(2242, 6, 115, 'g', NULL, NULL, 1, 'F51:D4:(Q1*A40)', 1237, 'X', 'B2C'),
+(2240, 6, 113, 'd', NULL, NULL, 1, 'F51:D4:(Q1*A40)', 1236, 'Bo', 'B2C'),
+(2241, 6, 113, 'f', NULL, NULL, 1, 'F51:D4:(Q1*A40)', 1236, 'Bo', 'B2C'),
+(2242, 6, 115, 'g', NULL, NULL, 1, 'F51:D4:(Q1*A40)', 1237, 'Bo', 'B2C'),
 (2243, 7, 329, 'b', NULL, NULL, 1, 'Q1:D4:A40', 1782, 'Bo', 'B3C'),
 (2244, 4, 331, 'a', NULL, NULL, 1, '(Q1*A40):D4', 1051, 'unknown', 'B3C'),
 (2245, 7, 299, 'c', NULL, NULL, 1, 'F51*D21:A40', 1761, 'Bo', 'B3C'),
@@ -5859,14 +5859,14 @@ INSERT INTO `spelling` (`id`, `vol`, `page`, `section`, `pyr_page`, `pyr_sect`, 
 (3673, 8, 361, NULL, 827, 'a', 1, 'D4:(Q1*A40)', 447, 'L', 'Sq1Ch'),
 (3674, 8, 325, NULL, 638, 'a', 1, 'D4:Q1', 368, 'L', 'Sq1Ch'),
 (3675, 8, 325, NULL, 638, 'a', 1, 'D4:Q1', 368, 'unknown', 'Sq1Cop'),
-(3676, 7, 62, 'h', NULL, NULL, 1, 'D4:Q1', 1573, 'X (E)', 'Sq1Sq'),
-(3677, 7, 62, 'j', NULL, NULL, 1, 'D4:Q1', 1573, 'X (E)', 'Sq1Sq'),
-(3678, 7, 62, 'k', NULL, NULL, 1, 'Q1*D4', 1573, 'X (E)', 'Sq1Sq'),
-(3679, 7, 62, 'm', NULL, NULL, 1, 'Q1*D4', 1573, 'X (E)', 'Sq1Sq'),
-(3680, 7, 62, 'n', NULL, NULL, 1, 'Q1*D4', 1573, 'X (E)', 'Sq1Sq'),
-(3681, 7, 62, 'q', NULL, NULL, 1, 'Q1*D4', 1573, 'X (E)', 'Sq1Sq'),
-(3682, 7, 62, 'r', NULL, NULL, 1, 'Q1*D4', 1573, 'X (E)', 'Sq1Sq'),
-(3683, 7, 62, 'aa', NULL, NULL, 1, 'Q1*D4', 1573, 'X (E)', 'Sq1Sq'),
+(3676, 7, 62, 'h', NULL, NULL, 1, 'D4:Q1', 1573, 'EW', 'Sq1Sq'),
+(3677, 7, 62, 'j', NULL, NULL, 1, 'D4:Q1', 1573, 'EW', 'Sq1Sq'),
+(3678, 7, 62, 'k', NULL, NULL, 1, 'Q1*D4', 1573, 'EW', 'Sq1Sq'),
+(3679, 7, 62, 'm', NULL, NULL, 1, 'Q1*D4', 1573, 'EW', 'Sq1Sq'),
+(3680, 7, 62, 'n', NULL, NULL, 1, 'Q1*D4', 1573, 'EW', 'Sq1Sq'),
+(3681, 7, 62, 'q', NULL, NULL, 1, 'Q1*D4', 1573, 'EW', 'Sq1Sq'),
+(3682, 7, 62, 'r', NULL, NULL, 1, 'Q1*D4', 1573, 'EW', 'Sq1Sq'),
+(3683, 7, 62, 'aa', NULL, NULL, 1, 'Q1*D4', 1573, 'EW', 'Sq1Sq'),
 (3684, 8, 14, NULL, 48, 'b', 1, 'Q1*D4', 70, 'unknown', 'Sq1Sq'),
 (3685, 8, 15, NULL, 49, 'a', 1, 'Q1*D4', 71, 'unknown', 'Sq1Sq'),
 (3686, 8, 15, NULL, 49, 'b', 1, 'Q1*D4', 71, 'unknown', 'Sq1Sq'),
@@ -6045,56 +6045,59 @@ INSERT INTO `spelling` (`id`, `vol`, `page`, `section`, `pyr_page`, `pyr_sect`, 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `spelling_type`
+-- Table structure for table `spelling_type`
 --
 
 CREATE TABLE `spelling_type` (
-  `code` varchar(100) NOT NULL,
-  `spelling_group` varchar(100) NOT NULL,
-  `disposition` varchar(100) NOT NULL,
+  `code` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `spelling_group` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `disposition` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `length` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `spelling_type`
+-- Dumping data for table `spelling_type`
 --
 
 INSERT INTO `spelling_type` (`code`, `spelling_group`, `disposition`, `length`) VALUES
 ('(D4:(Q1*Z1))*A40', 'eye-throne', 'compact', 4),
 ('(D4:Q1)*A40', 'eye-throne', 'compact', 3),
 ('(D4:Q1)*A40-retro', 'eye-throne', 'compact-retro', 3),
-('(F51:D21)*A40', 'flesh-mouth', 'compact', 3),
 ('(F51*Z1):D21:A40', 'flesh-mouth', 'vertical', 4),
+('(F51:D21)*A40', 'flesh-mouth', 'compact', 3),
+('(Q1*A40):D4', 'eye-throne', 'compact', 3),
 ('(Q1:D4)*A40', 'eye-throne', 'compact', 3),
 ('(Q1:D4)*G5', 'eye-throne', 'compact', 3),
 ('(Q1:D4)*R8', 'eye-throne', 'compact', 3),
-('(Q1*A40):D4', 'eye-throne', 'compact', 3),
 ('A40*(F51:D21)-retro', 'flesh-mouth', 'compact-retro', 3),
 ('A43', 'others', 'compact', 1),
+('D4*(Q1:A40)', 'eye-throne', 'horizontal', 3),
+('D4*Q1*A40', 'eye-throne', 'horizontal', 3),
 ('D4:(Q1*A40)', 'eye-throne', 'compact', 3),
 ('D4:(Q1*M17)', 'eye-throne', 'compact', 3),
 ('D4:(Q1*X1)', 'eye-throne', 'compact', 3),
 ('D4:(Q1*Z1)', 'eye-throne', 'compact', 3),
 ('D4:A40', 'eye-throne', 'vertical', 2),
 ('D4:Q1', 'eye-throne', 'vertical', 2),
+('D4:Q1*A43', 'eye-throne', 'compact', 3),
+('D4:Q1*G7', 'eye-throne', 'compact', 3),
+('D4:Q1*X1:A40', 'eye-throne', 'vertical', 4),
 ('D4:Q1:(M17*Z1)', 'eye-throne', 'compact', 4),
 ('D4:Q1:A40', 'eye-throne', 'vertical', 3),
 ('D4:Q1:N5:A40', 'eye-throne', 'vertical', 4),
 ('D4:Q1:R8', 'eye-throne', 'vertical', 3),
-('D4:Q1*A43', 'eye-throne', 'compact', 3),
-('D4:Q1*G7', 'eye-throne', 'compact', 3),
-('D4:Q1*X1:A40', 'eye-throne', 'vertical', 4),
-('D4*(Q1:A40)', 'eye-throne', 'horizontal', 3),
-('D4*Q1*A40', 'eye-throne', 'horizontal', 3),
+('F51*(D21:A40)', 'flesh-mouth', 'compact', 3),
+('F51*D21*A40', 'flesh-mouth', 'horizontal', 3),
+('F51*D21:A40', 'flesh-mouth', 'compact', 3),
 ('F51:A40:X1', 'flesh-mouth', 'vertical', 3),
 ('F51:D21', 'flesh-mouth', 'compact', 2),
 ('F51:D21:A40', 'flesh-mouth', 'vertical', 3),
 ('F51:D4:(Q1*A40)', 'others', 'compact', 4),
 ('F51:D4:A40', 'others', 'compact', 3),
 ('F51:X1:A40', 'flesh-mouth', 'vertical', 3),
-('F51*(D21:A40)', 'flesh-mouth', 'compact', 3),
-('F51*D21:A40', 'flesh-mouth', 'compact', 3),
-('F51*D21*A40', 'flesh-mouth', 'horizontal', 3),
+('Q1*(D4:A40)', 'eye-throne', 'compact', 3),
+('Q1*D4', 'eye-throne', 'horizontal', 2),
+('Q1*D4-retro', 'eye-throne', 'horizontal-retro', 2),
 ('Q1:A40', 'eye-throne', 'vertical', 2),
 ('Q1:D21:A40', 'eye-throne', 'vertical', 3),
 ('Q1:D4', 'eye-throne', 'vertical', 2),
@@ -6102,30 +6105,27 @@ INSERT INTO `spelling_type` (`code`, `spelling_group`, `disposition`, `length`) 
 ('Q1:D4:A40', 'eye-throne', 'vertical', 3),
 ('Q1:D4:A43', 'eye-throne', 'vertical', 3),
 ('Q1:D4:R8', 'eye-throne', 'vertical', 3),
-('Q1*(D4:A40)', 'eye-throne', 'compact', 3),
-('Q1*D4', 'eye-throne', 'horizontal', 2),
-('Q1*D4-retro', 'eye-throne', 'horizontal-retro', 2),
 ('Q2:D4', 'eye-throne', 'compact', 2),
 ('U40:D4', 'eye-throne', 'vertical', 2);
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `document`
+-- Indexes for table `document`
 --
 ALTER TABLE `document`
   ADD PRIMARY KEY (`code`);
 
 --
--- Indices de la tabla `spell`
+-- Indexes for table `spell`
 --
 ALTER TABLE `spell`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `spelling`
+-- Indexes for table `spelling`
 --
 ALTER TABLE `spelling`
   ADD PRIMARY KEY (`id`),
@@ -6134,33 +6134,33 @@ ALTER TABLE `spelling`
   ADD KEY `fk_document` (`document`);
 
 --
--- Indices de la tabla `spelling_type`
+-- Indexes for table `spelling_type`
 --
 ALTER TABLE `spelling_type`
   ADD PRIMARY KEY (`code`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `spell`
+-- AUTO_INCREMENT for table `spell`
 --
 ALTER TABLE `spell`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1900;
 
 --
--- AUTO_INCREMENT de la tabla `spelling`
+-- AUTO_INCREMENT for table `spelling`
 --
 ALTER TABLE `spelling`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3947;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `spelling`
+-- Constraints for table `spelling`
 --
 ALTER TABLE `spelling`
   ADD CONSTRAINT `fk_document` FOREIGN KEY (`document`) REFERENCES `document` (`code`) ON DELETE RESTRICT ON UPDATE RESTRICT,
