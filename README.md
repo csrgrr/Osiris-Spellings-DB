@@ -20,6 +20,19 @@ __These data allow us to know:__
 - Position in the document
 - Archaeological location
 
+### Position code:
+
+- Head = H
+- Foot = F
+- Back = B
+- Top = L
+- Front = Fr
+- Bottom = Bo
+- Side = S
+- Others(example: canoptic box) = X
+- Fragments and unknowns = 'unknown'
+
+
 ### How to import:
 You can import the .sql file directly into your preferred Database Manager or run the PHP files used to create this db.
 We do not recommener to use the PHP files for this purpose, since some changes have been made manually on the db.
