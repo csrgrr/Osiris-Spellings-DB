@@ -6077,7 +6077,7 @@ INSERT INTO `spelling_type` (`code`, `spelling_group`, `disposition`, `length`) 
 ('D4:(Q1*Z1)', 'eye-throne', 'compact', 3),
 ('D4:A40', 'eye-throne', 'vertical', 2),
 ('D4:Q1', 'eye-throne', 'vertical', 2),
-('D4:Q1:(M17*Z1)', 'eye-throne', 'compact', 4),
+('D4:Q1:(M17*Z1)', 'eye-throne', 'vertical', 4),
 ('D4:Q1:A40', 'eye-throne', 'vertical', 3),
 ('D4:Q1:N5:A40', 'eye-throne', 'vertical', 4),
 ('D4:Q1:R8', 'eye-throne', 'vertical', 3),
