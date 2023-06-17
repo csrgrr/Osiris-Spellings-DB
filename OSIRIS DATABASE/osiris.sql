@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 06-05-2023 a las 10:52:55
+-- Tiempo de generación: 17-06-2023 a las 10:14:37
 -- Versión del servidor: 8.0.31
 -- Versión de PHP: 8.0.25
 
@@ -94,8 +94,8 @@ INSERT INTO `document` (`code`, `time`, `location`, `type`) VALUES
 ('Da3C', '?', 'Dahshur', 'sarcophagus-gold-foil'),
 ('Da4C', '?', 'Dahshur', 'sarcophagus-gold-foil'),
 ('G1Be', '?', 'Gebelein', 'coffin'),
-('G1T', 'end I I.P', 'Gebelein', 'coffin'),
-('G2T', 'end I I.P', 'Gebelein', 'coffin'),
+('G1T', 'end I I.P.', 'Gebelein', 'coffin'),
+('G2T', 'end I I.P.', 'Gebelein', 'coffin'),
 ('H', '?', 'Gebelein?', 'coffin'),
 ('K1T', '?', 'Kaor', 'coffin'),
 ('L-A1', '?', 'Lisht', 'coffin'),
@@ -4812,7 +4812,7 @@ INSERT INTO `spelling` (`id`, `vol`, `page`, `section`, `pyr_page`, `pyr_sect`, 
 (2626, 8, 343, NULL, 763, 'a', 1, 'F51*D21:A40', 422, 'L & B', 'B10C'),
 (2627, 1, 261, 'e', NULL, NULL, 1, 'F51*(D21:A40)', 775, 'F & B & Fr', 'B10C'),
 (2628, 8, 114, NULL, 150, 'c', 1, 'F51:D4:(Q1*A40)', 216, 'Fr & B', 'B10C'),
-(2629, 8, 118, NULL, 151, 'c', 1, 'F51:D4:(Q1*A40)', 216, 'Fr & B', 'B10C'),
+(2629, 8, 118, 'b', NULL, NULL, 1, 'F51:X1:A40', 1, 'unknown', 'B17C'),
 (2630, 8, 153, NULL, 164, 'c', 1, 'F51:D4:(Q1*A40)', 218, 'Fr & B', 'B10C'),
 (2631, 8, 154, NULL, 164, 'e', 1, 'F51:D4:(Q1*A40)', 218, 'Fr & B', 'B10C'),
 (2632, 8, 156, NULL, 165, 'c', 1, 'F51:D4:(Q1*A40)', 218, 'Fr & B', 'B10C'),
@@ -4977,7 +4977,7 @@ INSERT INTO `spelling` (`id`, `vol`, `page`, `section`, `pyr_page`, `pyr_sect`, 
 (2791, 8, 450, NULL, 0, 'q', 1, 'F51*D21:A40', 1, 'unknown', 'B17C'),
 (2792, 8, 451, NULL, 0, 'l', 1, 'F51*D21:A40', 1, 'unknown', 'B17C'),
 (2793, 8, 449, NULL, 0, 'b', 1, 'F51:X1:A40', 1, 'unknown', 'B17C'),
-(2794, 8, 452, NULL, 0, 'b', 1, 'F51:D21', 1, 'unknown', 'B17C'),
+(2794, 8, 118, NULL, 151, 'c', 1, 'F51:D21', 216, 'Fr & B', 'B10C'),
 (2795, 6, 111, 'e', NULL, NULL, 1, 'D4:(Q1*A40)', 1235, 'X', 'B18C'),
 (2796, 6, 112, 'a', NULL, NULL, 1, 'D4:(Q1*A40)', 1235, 'X', 'B18C'),
 (2797, 6, 112, 'd', NULL, NULL, 1, 'D4:(Q1*A40)', 1235, 'X', 'B18C'),
@@ -6040,7 +6040,8 @@ INSERT INTO `spelling` (`id`, `vol`, `page`, `section`, `pyr_page`, `pyr_sect`, 
 (3853, 6, 277, 'l', NULL, NULL, 1, 'D4:Q1', 1370, 'H', 'TT319'),
 (3854, 6, 277, 'r', NULL, NULL, 1, 'D4:Q1', 1370, 'H', 'TT319'),
 (3855, 1, 11, 'a', NULL, NULL, 1, 'Q1:D4:A40', 718, 'Bo', 'Y1C'),
-(3856, 1, 14, 'b', NULL, NULL, 1, 'Q1:D4:A40', 718, 'Bo', 'Y1C');
+(3856, 1, 14, 'b', NULL, NULL, 1, 'Q1:D4:A40', 718, 'Bo', 'Y1C'),
+(3947, 1, 44, 'e', NULL, NULL, 1, 'F51:D21', 14, 'unknown', 'B15C');
 
 -- --------------------------------------------------------
 
@@ -6153,7 +6154,7 @@ ALTER TABLE `spell`
 -- AUTO_INCREMENT de la tabla `spelling`
 --
 ALTER TABLE `spelling`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3947;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3948;
 
 --
 -- Restricciones para tablas volcadas
